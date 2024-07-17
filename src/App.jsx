@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Button from "./components/button/button";
+import Checkbox from "./components/checkbox/checkbox";
+import LabelCheckBox from "./components/label-checkbox/label-checkbox";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const pages = [];
+
+  for (let i = 1; i <= 4; i++) {
+    pages.push(<LabelCheckBox count={1} label={`Page ${i}`} />);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <div className="box box1">
+          <Button count={3} />
+        </div>
+        <div className="box box2">
+          <Checkbox count={8} />
+        </div>
+        <div className="box box3">
+          <LabelCheckBox count={7} label="All pages" />
+        </div>
+        <div className="box box4">
+          <div className="form">
+            <LabelCheckBox count={1} label="All pages" />
+            <hr className="divider" />
+            {pages}
+            <hr className="divider" />
+            <br />
+            <Button count={1} />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

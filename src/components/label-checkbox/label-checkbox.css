@@ -1,0 +1,15 @@
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  border: 1px;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  justify-content: space-between;
+  align-items: center;
+}

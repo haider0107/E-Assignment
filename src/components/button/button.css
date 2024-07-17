@@ -1,0 +1,17 @@
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.full-width-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffd700; /* Example button background color */
+  border: none;
+  cursor: pointer;
+}
+
+.full-width-button:hover {
+  background-color: #ffc700; /* Example hover effect */
+}
